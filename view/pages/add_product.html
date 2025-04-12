@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login - LBox</title>
+        <link rel="stylesheet" href="/assets/css/reset.css" />
+        <link rel="stylesheet" href="/assets/css/add_product.css" />
+    </head>
+    <body>
+        <img src="/assets/img/logo.png" class="positioned-image" alt="Logo" />
+
+        <header>
+            <div class="header-menu">
+                <a href="/pages/index.html">Home</a>
+                <a href="/add_product.html">Nosso Produtos</a>
+                <a href="#">Faça um orçamento</a>
+                <a href="/pages/login.html">Funcionários</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-card">
+                <form onsubmit="login(event)">
+                    <label for="username">Título do produto</label>
+                    <input type="text" id="username" name="username" required />
+
+                    <label for="text">subtítulo</label>
+                    <input type="text" id="subtitle" name="password" required />
+
+                    <label for="text">Título da descrição</label>
+                    <input type="text" id="description-title" required />
+
+                    <label for="text">Url da imagem</label>
+                    <input type="text" id="image-url" required />
+
+                    <div class="div-less-text">
+                        <div>
+                            <label>Preço</label>
+                            <input type="text" id="price" class="less-text" />
+                        </div>
+                        <div>
+                            <label>Cor 1</label>
+                            <input type="text" id="color-2" class="less-text" />
+                        </div>
+                        <div>
+                            <label>Cor 2</label>
+                            <input type="text" id="color-2" class="less-text" />
+                        </div>
+                    </div>
+                    <label for="text">Texto do produto</label>
+                    <textarea class="more-text" id="product-text"></textarea>
+
+                    <label for="text">Descrição do produto</label>
+                    <textarea class="more-text" id="product-text"></textarea>
+
+                    <button type="submit">Adicionar produto</button>
+                    <div class="status" id="status"></div>
+                </form>
+            </div>
+        </main>
+
+        <script src="/assets/js/login.js"></script>
+    </body>
+</html>
