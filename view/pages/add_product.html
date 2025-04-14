@@ -18,30 +18,27 @@
                 <a href="/pages/login.html">Funcionários</a>
             </div>
         </header>
-
-        <main>
+        <main id="products">
             <div class="login-card">
-                <form onsubmit="login(event)">
+                <div class="mother-div">
                     <label for="username">Título do produto</label>
-                    <input type="text" id="username" name="username" required />
+                    <input
+                        type="text"
+                        id="input-title"
+                        name="username"
+                        required
+                    />
 
                     <label for="text">subtítulo</label>
-                    <input type="text" id="subtitle" name="password" required />
-
-                    <label for="text">Título da descrição</label>
-                    <input type="text" id="description-title" required />
+                    <input type="text" id="input-subtitle" required />
 
                     <label for="text">Url da imagem</label>
-                    <input type="text" id="image-url" required />
+                    <input type="text" id="input-img-url" required />
 
                     <div class="div-less-text">
                         <div>
-                            <label>Preço</label>
-                            <input type="text" id="price" class="less-text" />
-                        </div>
-                        <div>
                             <label>Cor 1</label>
-                            <input type="text" id="color-2" class="less-text" />
+                            <input type="text" id="color-1" class="less-text" />
                         </div>
                         <div>
                             <label>Cor 2</label>
@@ -49,17 +46,15 @@
                         </div>
                     </div>
                     <label for="text">Texto do produto</label>
-                    <textarea class="more-text" id="product-text"></textarea>
+                    <textarea class="more-text" id="textarea-text"></textarea>
+                    <button type="button" class="submit-button">
+                        Adicionar produto
+                    </button>
 
-                    <label for="text">Descrição do produto</label>
-                    <textarea class="more-text" id="product-text"></textarea>
-
-                    <button type="submit">Adicionar produto</button>
-                    <div class="status" id="status"></div>
-                </form>
+                    <div class="status"></div>
+                </div>
             </div>
         </main>
-
-        <script src="/assets/js/login.js"></script>
     </body>
+    <script src="/assets/js/add_product.js"></script>
 </html>

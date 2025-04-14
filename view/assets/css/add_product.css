@@ -63,11 +63,11 @@ main {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+    flex-direction: column;
 }
 
 .login-card {
-    position: absolute;
-    top: 175px;
+    margin-top: 175px;
     bottom: 158px;
     display: block;
     margin-left: auto;
@@ -76,7 +76,7 @@ main {
     border-radius: 10px;
     box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
     width: 1200px;
-    height: 1550px;
+    height: 1100px;
     background-color: white;
     text-align: center;
     opacity: 0;
@@ -86,12 +86,61 @@ main {
     font-size: 28px;
 }
 
+.product-card {
+    margin-top: 100px;
+    width: 1200px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.8s;
+    font-size: 28px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+}
+.product-img {
+    width: 490px;
+    height: 490px;
+}
+.product-content {
+    flex: 1;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    gap: 30px;
+}
+.delete-btn {
+    z-index: 2;
+    position: absolute;
+    top: 6px;
+    right: 20px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    color: #888;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.delete-btn:hover {
+    color: red;
+    background: none;
+}
+
 .user-icon {
     width: 255px;
     height: 255px;
 }
 
-form {
+.mother-div {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
@@ -151,6 +200,10 @@ button {
     text-align: center;
     display: block;
     margin: auto;
+}
+.botao {
+    position: relative;
+    z-index: 10;
 }
 
 button:hover {
