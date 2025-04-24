@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+.positioned-image {
+    position: absolute;
+    left: 36px;
+    top: 36px;
+    width: 186.89px;
+    height: 108.18px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.1s;
+}
+body {
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 400;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+header {
+    height: 83px;
+    display: flex;
+    font-size: 30px;
+    text-shadow: 2px 2px 8px black;
+    text-decoration: underline;
+    text-decoration-thickness: 2px; /* Espessura da linha */
+    text-underline-offset: 6px;
+    z-index: 2;
+}
+.header-menu {
+    display: flex;
+    justify-content: center;
+    margin: 60px auto 2px auto;
+    bottom: 0;
+    gap: 110px;
+    z-index: 2;
+}
+.header-menu a {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+    color: white;
+}
+
+.header-menu a:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.header-menu a:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.header-menu a:nth-child(3) {
+    animation-delay: 0.6s;
+}
+.header-menu a:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.div-text {
+    position: absolute;
+    top: 268px;
+    right: 1104px;
+    bottom: 65px;
+    left: 181px;
+    height: 635px;
+    width: 747px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 2px 2px 8px black;
+}
+.image-wrapper {
+    position: absolute;
+    top: 80px;
+    right: 65px;
+    left: 960px;
+    height: 895px;
+    width: 895px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.8s;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* sem transform nem opacity aqui! */
+}
+
+h1 {
+    font-size: 66px;
+    margin-bottom: 93px;
+    margin-right: 150px;
+}
+h2 {
+    margin-right: 150px;
+    margin-bottom: 70px;
+    font-size: 44px;
+}
+p {
+    text-align: justify;
+    font-size: 30px;
+    margin-right: 150px;
+}
+
+.div-text > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+.div-text h1 {
+    animation-delay: 0.2s;
+}
+.div-text h2 {
+    animation-delay: 0.4s;
+}
+.div-text p {
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/img/imagem_textura_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 50% 50%, #dea8fd, #a200ff);
+    background-size: 200% 100%;
+    animation: animateRadial 10s ease-in-out infinite alternate;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.7;
+}
+@keyframes animateRadial {
+    0% {
+        background-position: 30% 30%;
+    }
+    25% {
+        background-position: 70% 40%;
+    }
+    50% {
+        background-position: 50% 80%;
+    }
+    75% {
+        background-position: 60% 20%;
+    }
+    100% {
+        background-position: 30% 30%;
+    }
+}
+.transicao {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    z-index: 10;
+}
